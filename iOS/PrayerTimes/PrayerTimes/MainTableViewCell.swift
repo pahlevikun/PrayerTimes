@@ -1,5 +1,5 @@
 //
-//  PrayerTableViewCell.swift
+//  MainTableViewCell.swift
 //  PrayerTimes
 //
 //  Created by Farhan Yuda Pahlevi on 5/22/18.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class PrayerTableViewCell: UITableViewCell {
+class MainTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fajrLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

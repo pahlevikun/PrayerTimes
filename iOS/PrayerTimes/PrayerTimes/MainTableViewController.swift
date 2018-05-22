@@ -1,5 +1,5 @@
 //
-//  PrayerTableViewController.swift
+//  MainTableViewController.swift
 //  PrayerTimes
 //
 //  Created by Farhan Yuda Pahlevi on 5/22/18.
@@ -8,10 +8,14 @@
 
 import UIKit
 
-class PrayerTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController {
+    
+    var times = [Time]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadSample()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +33,28 @@ class PrayerTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return times.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "MainTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MainTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        
+        let timeItem = times[indexPath.row]
+        cell.fajrLabel.text = timeItem.fajr
 
         // Configure the cell...
-
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +100,17 @@ class PrayerTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func loadSample() {
+        
+        
+        
+        guard let time1 = Time(fajr: "05:30", sunrise: "06:30", dhuhr: "12:00", asr: "15:00", sunset: "18:00", maghrib: "18:00", isha: "19:00", imsak: "06:20", midnight: "23:00", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
+            fatalError("Unable to instantiate meal1")
+        }
+       
+        times += [time1]
+        
+    }
 
 }

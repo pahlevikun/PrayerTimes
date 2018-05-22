@@ -7,48 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8F086D120B33C7F002AD525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F086D020B33C7F002AD525 /* AppDelegate.swift */; };
-		D8F086D320B33C7F002AD525 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F086D220B33C7F002AD525 /* ViewController.swift */; };
-		D8F086D620B33C7F002AD525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F086D420B33C7F002AD525 /* Main.storyboard */; };
-		D8F086D820B33C7F002AD525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F086D720B33C7F002AD525 /* Assets.xcassets */; };
-		D8F086DB20B33C7F002AD525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F086D920B33C7F002AD525 /* LaunchScreen.storyboard */; };
-		D8F086E620B33C7F002AD525 /* PrayerTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F086E520B33C7F002AD525 /* PrayerTimesTests.swift */; };
-		D8F086F320B33D33002AD525 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F086F220B33D33002AD525 /* Time.swift */; };
+		D8B8976A20B44C4C003CEBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8976920B44C4C003CEBBD /* AppDelegate.swift */; };
+		D8B8976C20B44C4C003CEBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8976B20B44C4C003CEBBD /* ViewController.swift */; };
+		D8B8976F20B44C4C003CEBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B8976D20B44C4C003CEBBD /* Main.storyboard */; };
+		D8B8977120B44C4C003CEBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B8977020B44C4C003CEBBD /* Assets.xcassets */; };
+		D8B8977420B44C4C003CEBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B8977220B44C4C003CEBBD /* LaunchScreen.storyboard */; };
+		D8B8977F20B44C4C003CEBBD /* PrayerTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8977E20B44C4C003CEBBD /* PrayerTimesTests.swift */; };
+		D8B8978A20B44DE2003CEBBD /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8978920B44DE2003CEBBD /* MainTableViewController.swift */; };
+		D8B8978C20B44E34003CEBBD /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8978B20B44E34003CEBBD /* MainTableViewCell.swift */; };
+		D8B897A520B45233003CEBBD /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8979720B45232003CEBBD /* Time.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D8F086E220B33C7F002AD525 /* PBXContainerItemProxy */ = {
+		D8B8977B20B44C4C003CEBBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D8F086C520B33C7F002AD525 /* Project object */;
+			containerPortal = D8B8975E20B44C4C003CEBBD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D8F086CC20B33C7F002AD525;
+			remoteGlobalIDString = D8B8976520B44C4C003CEBBD;
 			remoteInfo = PrayerTimes;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D8F086CD20B33C7F002AD525 /* PrayerTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8F086D020B33C7F002AD525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8F086D220B33C7F002AD525 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D8F086D520B33C7F002AD525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D8F086D720B33C7F002AD525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D8F086DA20B33C7F002AD525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D8F086DC20B33C7F002AD525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8F086E120B33C7F002AD525 /* PrayerTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8F086E520B33C7F002AD525 /* PrayerTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesTests.swift; sourceTree = "<group>"; };
-		D8F086E720B33C7F002AD525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8F086F220B33D33002AD525 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		D8B8976620B44C4C003CEBBD /* PrayerTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B8976920B44C4C003CEBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8B8976B20B44C4C003CEBBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8B8976E20B44C4C003CEBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8B8977020B44C4C003CEBBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8B8977320B44C4C003CEBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8B8977520B44C4C003CEBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8B8977A20B44C4C003CEBBD /* PrayerTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B8977E20B44C4C003CEBBD /* PrayerTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesTests.swift; sourceTree = "<group>"; };
+		D8B8978020B44C4C003CEBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8B8978920B44DE2003CEBBD /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D8B8978B20B44E34003CEBBD /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		D8B8979720B45232003CEBBD /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D8F086CA20B33C7F002AD525 /* Frameworks */ = {
+		D8B8976320B44C4C003CEBBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8F086DE20B33C7F002AD525 /* Frameworks */ = {
+		D8B8977720B44C4C003CEBBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,43 +62,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D8F086C420B33C7F002AD525 = {
+		D8B8975D20B44C4C003CEBBD = {
 			isa = PBXGroup;
 			children = (
-				D8F086CF20B33C7F002AD525 /* PrayerTimes */,
-				D8F086E420B33C7F002AD525 /* PrayerTimesTests */,
-				D8F086CE20B33C7F002AD525 /* Products */,
+				D8B8976820B44C4C003CEBBD /* PrayerTimes */,
+				D8B8977D20B44C4C003CEBBD /* PrayerTimesTests */,
+				D8B8976720B44C4C003CEBBD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D8F086CE20B33C7F002AD525 /* Products */ = {
+		D8B8976720B44C4C003CEBBD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D8F086CD20B33C7F002AD525 /* PrayerTimes.app */,
-				D8F086E120B33C7F002AD525 /* PrayerTimesTests.xctest */,
+				D8B8976620B44C4C003CEBBD /* PrayerTimes.app */,
+				D8B8977A20B44C4C003CEBBD /* PrayerTimesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D8F086CF20B33C7F002AD525 /* PrayerTimes */ = {
+		D8B8976820B44C4C003CEBBD /* PrayerTimes */ = {
 			isa = PBXGroup;
 			children = (
-				D8F086F220B33D33002AD525 /* Time.swift */,
-				D8F086D020B33C7F002AD525 /* AppDelegate.swift */,
-				D8F086D220B33C7F002AD525 /* ViewController.swift */,
-				D8F086D420B33C7F002AD525 /* Main.storyboard */,
-				D8F086D720B33C7F002AD525 /* Assets.xcassets */,
-				D8F086D920B33C7F002AD525 /* LaunchScreen.storyboard */,
-				D8F086DC20B33C7F002AD525 /* Info.plist */,
+				D8B8979720B45232003CEBBD /* Time.swift */,
+				D8B8976920B44C4C003CEBBD /* AppDelegate.swift */,
+				D8B8976B20B44C4C003CEBBD /* ViewController.swift */,
+				D8B8976D20B44C4C003CEBBD /* Main.storyboard */,
+				D8B8977020B44C4C003CEBBD /* Assets.xcassets */,
+				D8B8977220B44C4C003CEBBD /* LaunchScreen.storyboard */,
+				D8B8977520B44C4C003CEBBD /* Info.plist */,
+				D8B8978920B44DE2003CEBBD /* MainTableViewController.swift */,
+				D8B8978B20B44E34003CEBBD /* MainTableViewCell.swift */,
 			);
 			path = PrayerTimes;
 			sourceTree = "<group>";
 		};
-		D8F086E420B33C7F002AD525 /* PrayerTimesTests */ = {
+		D8B8977D20B44C4C003CEBBD /* PrayerTimesTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8F086E520B33C7F002AD525 /* PrayerTimesTests.swift */,
-				D8F086E720B33C7F002AD525 /* Info.plist */,
+				D8B8977E20B44C4C003CEBBD /* PrayerTimesTests.swift */,
+				D8B8978020B44C4C003CEBBD /* Info.plist */,
 			);
 			path = PrayerTimesTests;
 			sourceTree = "<group>";
@@ -102,13 +108,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D8F086CC20B33C7F002AD525 /* PrayerTimes */ = {
+		D8B8976520B44C4C003CEBBD /* PrayerTimes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8F086EA20B33C7F002AD525 /* Build configuration list for PBXNativeTarget "PrayerTimes" */;
+			buildConfigurationList = D8B8978320B44C4C003CEBBD /* Build configuration list for PBXNativeTarget "PrayerTimes" */;
 			buildPhases = (
-				D8F086C920B33C7F002AD525 /* Sources */,
-				D8F086CA20B33C7F002AD525 /* Frameworks */,
-				D8F086CB20B33C7F002AD525 /* Resources */,
+				D8B8976220B44C4C003CEBBD /* Sources */,
+				D8B8976320B44C4C003CEBBD /* Frameworks */,
+				D8B8976420B44C4C003CEBBD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -116,49 +122,49 @@
 			);
 			name = PrayerTimes;
 			productName = PrayerTimes;
-			productReference = D8F086CD20B33C7F002AD525 /* PrayerTimes.app */;
+			productReference = D8B8976620B44C4C003CEBBD /* PrayerTimes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D8F086E020B33C7F002AD525 /* PrayerTimesTests */ = {
+		D8B8977920B44C4C003CEBBD /* PrayerTimesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8F086ED20B33C7F002AD525 /* Build configuration list for PBXNativeTarget "PrayerTimesTests" */;
+			buildConfigurationList = D8B8978620B44C4C003CEBBD /* Build configuration list for PBXNativeTarget "PrayerTimesTests" */;
 			buildPhases = (
-				D8F086DD20B33C7F002AD525 /* Sources */,
-				D8F086DE20B33C7F002AD525 /* Frameworks */,
-				D8F086DF20B33C7F002AD525 /* Resources */,
+				D8B8977620B44C4C003CEBBD /* Sources */,
+				D8B8977720B44C4C003CEBBD /* Frameworks */,
+				D8B8977820B44C4C003CEBBD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D8F086E320B33C7F002AD525 /* PBXTargetDependency */,
+				D8B8977C20B44C4C003CEBBD /* PBXTargetDependency */,
 			);
 			name = PrayerTimesTests;
 			productName = PrayerTimesTests;
-			productReference = D8F086E120B33C7F002AD525 /* PrayerTimesTests.xctest */;
+			productReference = D8B8977A20B44C4C003CEBBD /* PrayerTimesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D8F086C520B33C7F002AD525 /* Project object */ = {
+		D8B8975E20B44C4C003CEBBD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Apple Inc.";
 				TargetAttributes = {
-					D8F086CC20B33C7F002AD525 = {
+					D8B8976520B44C4C003CEBBD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					D8F086E020B33C7F002AD525 = {
+					D8B8977920B44C4C003CEBBD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D8F086CC20B33C7F002AD525;
+						TestTargetID = D8B8976520B44C4C003CEBBD;
 					};
 				};
 			};
-			buildConfigurationList = D8F086C820B33C7F002AD525 /* Build configuration list for PBXProject "PrayerTimes" */;
+			buildConfigurationList = D8B8976120B44C4C003CEBBD /* Build configuration list for PBXProject "PrayerTimes" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,29 +172,29 @@
 				en,
 				Base,
 			);
-			mainGroup = D8F086C420B33C7F002AD525;
-			productRefGroup = D8F086CE20B33C7F002AD525 /* Products */;
+			mainGroup = D8B8975D20B44C4C003CEBBD;
+			productRefGroup = D8B8976720B44C4C003CEBBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D8F086CC20B33C7F002AD525 /* PrayerTimes */,
-				D8F086E020B33C7F002AD525 /* PrayerTimesTests */,
+				D8B8976520B44C4C003CEBBD /* PrayerTimes */,
+				D8B8977920B44C4C003CEBBD /* PrayerTimesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D8F086CB20B33C7F002AD525 /* Resources */ = {
+		D8B8976420B44C4C003CEBBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F086DB20B33C7F002AD525 /* LaunchScreen.storyboard in Resources */,
-				D8F086D820B33C7F002AD525 /* Assets.xcassets in Resources */,
-				D8F086D620B33C7F002AD525 /* Main.storyboard in Resources */,
+				D8B8977420B44C4C003CEBBD /* LaunchScreen.storyboard in Resources */,
+				D8B8977120B44C4C003CEBBD /* Assets.xcassets in Resources */,
+				D8B8976F20B44C4C003CEBBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8F086DF20B33C7F002AD525 /* Resources */ = {
+		D8B8977820B44C4C003CEBBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,47 +204,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D8F086C920B33C7F002AD525 /* Sources */ = {
+		D8B8976220B44C4C003CEBBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F086F320B33D33002AD525 /* Time.swift in Sources */,
-				D8F086D320B33C7F002AD525 /* ViewController.swift in Sources */,
-				D8F086D120B33C7F002AD525 /* AppDelegate.swift in Sources */,
+				D8B8976C20B44C4C003CEBBD /* ViewController.swift in Sources */,
+				D8B8978A20B44DE2003CEBBD /* MainTableViewController.swift in Sources */,
+				D8B8978C20B44E34003CEBBD /* MainTableViewCell.swift in Sources */,
+				D8B897A520B45233003CEBBD /* Time.swift in Sources */,
+				D8B8976A20B44C4C003CEBBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8F086DD20B33C7F002AD525 /* Sources */ = {
+		D8B8977620B44C4C003CEBBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F086E620B33C7F002AD525 /* PrayerTimesTests.swift in Sources */,
+				D8B8977F20B44C4C003CEBBD /* PrayerTimesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D8F086E320B33C7F002AD525 /* PBXTargetDependency */ = {
+		D8B8977C20B44C4C003CEBBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D8F086CC20B33C7F002AD525 /* PrayerTimes */;
-			targetProxy = D8F086E220B33C7F002AD525 /* PBXContainerItemProxy */;
+			target = D8B8976520B44C4C003CEBBD /* PrayerTimes */;
+			targetProxy = D8B8977B20B44C4C003CEBBD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D8F086D420B33C7F002AD525 /* Main.storyboard */ = {
+		D8B8976D20B44C4C003CEBBD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D8F086D520B33C7F002AD525 /* Base */,
+				D8B8976E20B44C4C003CEBBD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D8F086D920B33C7F002AD525 /* LaunchScreen.storyboard */ = {
+		D8B8977220B44C4C003CEBBD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D8F086DA20B33C7F002AD525 /* Base */,
+				D8B8977320B44C4C003CEBBD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -246,7 +254,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D8F086E820B33C7F002AD525 /* Debug */ = {
+		D8B8978120B44C4C003CEBBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -303,7 +311,7 @@
 			};
 			name = Debug;
 		};
-		D8F086E920B33C7F002AD525 /* Release */ = {
+		D8B8978220B44C4C003CEBBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,7 +361,7 @@
 			};
 			name = Release;
 		};
-		D8F086EB20B33C7F002AD525 /* Debug */ = {
+		D8B8978420B44C4C003CEBBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -361,14 +369,14 @@
 				DEVELOPMENT_TEAM = EC38WK85A5;
 				INFOPLIST_FILE = PrayerTimes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.deggan.prayertimes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deggan.PrayerTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D8F086EC20B33C7F002AD525 /* Release */ = {
+		D8B8978520B44C4C003CEBBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -376,14 +384,14 @@
 				DEVELOPMENT_TEAM = EC38WK85A5;
 				INFOPLIST_FILE = PrayerTimes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.deggan.prayertimes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deggan.PrayerTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		D8F086EE20B33C7F002AD525 /* Debug */ = {
+		D8B8978720B44C4C003CEBBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -400,7 +408,7 @@
 			};
 			name = Debug;
 		};
-		D8F086EF20B33C7F002AD525 /* Release */ = {
+		D8B8978820B44C4C003CEBBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -420,34 +428,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D8F086C820B33C7F002AD525 /* Build configuration list for PBXProject "PrayerTimes" */ = {
+		D8B8976120B44C4C003CEBBD /* Build configuration list for PBXProject "PrayerTimes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8F086E820B33C7F002AD525 /* Debug */,
-				D8F086E920B33C7F002AD525 /* Release */,
+				D8B8978120B44C4C003CEBBD /* Debug */,
+				D8B8978220B44C4C003CEBBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8F086EA20B33C7F002AD525 /* Build configuration list for PBXNativeTarget "PrayerTimes" */ = {
+		D8B8978320B44C4C003CEBBD /* Build configuration list for PBXNativeTarget "PrayerTimes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8F086EB20B33C7F002AD525 /* Debug */,
-				D8F086EC20B33C7F002AD525 /* Release */,
+				D8B8978420B44C4C003CEBBD /* Debug */,
+				D8B8978520B44C4C003CEBBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8F086ED20B33C7F002AD525 /* Build configuration list for PBXNativeTarget "PrayerTimesTests" */ = {
+		D8B8978620B44C4C003CEBBD /* Build configuration list for PBXNativeTarget "PrayerTimesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8F086EE20B33C7F002AD525 /* Debug */,
-				D8F086EF20B33C7F002AD525 /* Release */,
+				D8B8978720B44C4C003CEBBD /* Debug */,
+				D8B8978820B44C4C003CEBBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D8F086C520B33C7F002AD525 /* Project object */;
+	rootObject = D8B8975E20B44C4C003CEBBD /* Project object */;
 }
