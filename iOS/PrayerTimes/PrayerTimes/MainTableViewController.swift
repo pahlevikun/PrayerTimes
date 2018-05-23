@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController, CLLocationManagerDelegate {
     
     var times = [Time]()
-
+    var locManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Core Location Manager asks for GPS location
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.requestWhenInUseAuthorization()
+        locManager.startMonitoringSignificantLocationChanges()
+        
         loadSample()
+        getJsonFromUrl()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -101,16 +110,69 @@ class MainTableViewController: UITableViewController {
     }
     */
     
+    // MARK: - Private method
+    
     private func loadSample() {
-        
-        
-        
         guard let time1 = Time(fajr: "05:30", sunrise: "06:30", dhuhr: "12:00", asr: "15:00", sunset: "18:00", maghrib: "18:00", isha: "19:00", imsak: "06:20", midnight: "23:00", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
             fatalError("Unable to instantiate meal1")
         }
        
         times += [time1]
+    }
+    
+    //this function is fetching the json from URL
+    func getJsonFromUrl(){
+        // ProgressLoading
+        let indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        indicator.frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 100))
+        indicator.center = view.center
+        view.addSubview(indicator)
+        indicator.bringSubview(toFront: view)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        indicator.startAnimating()
         
+        // Getting latitude and longitude from locManager
+        guard let latitude = locManager.location?.coordinate.latitude else {
+            fatalError("Unable to get latitude")
+        }
+        guard let longitude = locManager.location?.coordinate.longitude else {
+            fatalError("unable to get longitude")
+        }
+        
+        // Getting date from calendar
+        let date = Date()
+        let calendar = Calendar.current
+        let currentYear = calendar.component(.year, from: date) // gets current year (i.e. 2017)
+        let currentMonth = calendar.component(.month, from: date) // gets current month (i.e. 10)
+        let currentDate = calendar.component(.day, from: date) // gets current month (i.e. 10)
+        
+        // Print it for checking
+        print(currentMonth)
+        print(currentYear)
+        print(latitude)
+        print(longitude)
+        
+        // Making query for URL
+        let query = "calendar?latitude=\(latitude)&longitude=\(longitude)&method=11&month=\(currentMonth)&year=\(currentYear)"
+        //Create URL
+        let url = URL(string: APIConfig.END_POINT+query)
+        
+        // Fetching the data from the URL
+        URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                print("Doing request...")
+                //printing the json in console
+                print(jsonObj!.value(forKey: "data")!)
+                
+                OperationQueue.main.addOperation({
+                    //calling another function after fetching the json 
+                    //it will show the names to label
+                    print("Request done...")
+                    indicator.stopAnimating()
+                })
+            }
+        }).resume()
     }
 
 }

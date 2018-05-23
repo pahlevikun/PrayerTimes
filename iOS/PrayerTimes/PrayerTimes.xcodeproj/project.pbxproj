@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80DE6BD20B5D342004BB050 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DE6BC20B5D342004BB050 /* APIConfig.swift */; };
 		D8B8976A20B44C4C003CEBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8976920B44C4C003CEBBD /* AppDelegate.swift */; };
 		D8B8976C20B44C4C003CEBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8976B20B44C4C003CEBBD /* ViewController.swift */; };
 		D8B8976F20B44C4C003CEBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B8976D20B44C4C003CEBBD /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D80DE6BC20B5D342004BB050 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		D8B8976620B44C4C003CEBBD /* PrayerTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B8976920B44C4C003CEBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8B8976B20B44C4C003CEBBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				D8B8977520B44C4C003CEBBD /* Info.plist */,
 				D8B8978920B44DE2003CEBBD /* MainTableViewController.swift */,
 				D8B8978B20B44E34003CEBBD /* MainTableViewCell.swift */,
+				D80DE6BC20B5D342004BB050 /* APIConfig.swift */,
 			);
 			path = PrayerTimes;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				D8B8976C20B44C4C003CEBBD /* ViewController.swift in Sources */,
 				D8B8978A20B44DE2003CEBBD /* MainTableViewController.swift in Sources */,
+				D80DE6BD20B5D342004BB050 /* APIConfig.swift in Sources */,
 				D8B8978C20B44E34003CEBBD /* MainTableViewCell.swift in Sources */,
 				D8B897A520B45233003CEBBD /* Time.swift in Sources */,
 				D8B8976A20B44C4C003CEBBD /* AppDelegate.swift in Sources */,
