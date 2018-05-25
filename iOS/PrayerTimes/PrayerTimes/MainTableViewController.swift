@@ -57,8 +57,6 @@ class MainTableViewController: UITableViewController, CLLocationManagerDelegate 
             fatalError("The dequeued cell is not an instance of MealTableViewCell.")
         }
         
-        let timeItem = times[indexPath.row]
-        cell.fajrLabel.text = timeItem.fajr
 
         // Configure the cell...
         return cell

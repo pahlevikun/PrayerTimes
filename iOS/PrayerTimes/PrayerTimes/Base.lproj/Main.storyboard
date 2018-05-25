@@ -1,85 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WQz-KV-vlW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fkM-fj-VOr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Prayer Times-->
-        <scene sceneID="kG0-Gu-GAE">
+        <scene sceneID="Bku-xI-mKR">
             <objects>
-                <tableViewController id="x2x-yB-riW" customClass="MainTableViewController" customModule="PrayerTimes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RXh-2K-spZ">
+                <viewController id="vzX-MZ-4p6" customClass="ViewController" customModule="PrayerTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gbQ-Sl-sQS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="100" id="BUE-aM-y8t" customClass="MainTableViewCell" customModule="PrayerTimes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUE-aM-y8t" id="zxq-Rq-33c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fajr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTm-jU-XC6">
-                                            <rect key="frame" x="16" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-sA-ecX">
-                                            <rect key="frame" x="16" y="40" width="94" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masjid" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHv-5b-ajd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UHv-5b-ajd" secondAttribute="height" multiplier="125:72" id="UcK-ia-Ib7"/>
+                                    <constraint firstAttribute="height" constant="216" id="YVa-Us-jqH"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k79-cN-RB4">
+                                <rect key="frame" x="0.0" y="280" width="375" height="387"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="70" id="X3l-sa-FWe" customClass="MainTableViewCell" customModule="PrayerTimes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X3l-sa-FWe" id="SRV-bF-VPp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-Jl-rF2">
+                                                    <rect key="frame" x="15" y="24" width="345" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imsak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efm-3L-hfG">
+                                                    <rect key="frame" x="15" y="24" width="345" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="efm-3L-hfG" firstAttribute="centerX" secondItem="SRV-bF-VPp" secondAttribute="centerX" id="2x0-pp-mZt"/>
+                                                <constraint firstItem="t1m-Jl-rF2" firstAttribute="centerY" secondItem="SRV-bF-VPp" secondAttribute="centerY" id="9lF-C9-DfQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="t1m-Jl-rF2" secondAttribute="bottom" constant="13" id="ARj-ml-xoI"/>
+                                                <constraint firstItem="efm-3L-hfG" firstAttribute="top" secondItem="SRV-bF-VPp" secondAttribute="topMargin" constant="13" id="EX2-UK-iov"/>
+                                                <constraint firstItem="t1m-Jl-rF2" firstAttribute="centerX" secondItem="SRV-bF-VPp" secondAttribute="centerX" id="IKd-m9-IIg"/>
+                                                <constraint firstItem="efm-3L-hfG" firstAttribute="leading" secondItem="SRV-bF-VPp" secondAttribute="leadingMargin" id="KcT-iR-fBM"/>
+                                                <constraint firstItem="t1m-Jl-rF2" firstAttribute="trailing" secondItem="SRV-bF-VPp" secondAttribute="trailingMargin" id="Mpj-5c-bqM"/>
+                                                <constraint firstItem="efm-3L-hfG" firstAttribute="centerY" secondItem="SRV-bF-VPp" secondAttribute="centerY" id="Pdw-bd-Buw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="efm-3L-hfG" secondAttribute="bottom" constant="13" id="e90-eZ-N1W"/>
+                                                <constraint firstItem="t1m-Jl-rF2" firstAttribute="top" secondItem="SRV-bF-VPp" secondAttribute="topMargin" constant="13" id="moG-ii-Ewr"/>
+                                                <constraint firstItem="t1m-Jl-rF2" firstAttribute="centerX" secondItem="SRV-bF-VPp" secondAttribute="centerX" id="uZt-ek-JbB"/>
+                                                <constraint firstItem="t1m-Jl-rF2" firstAttribute="centerY" secondItem="SRV-bF-VPp" secondAttribute="centerY" id="zFF-pm-0Yx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="efm-3L-hfG" id="to4-9F-BRV"/>
+                                            <outlet property="timeLabel" destination="t1m-Jl-rF2" id="Xnb-ch-Qo2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="fajrLabel" destination="eaE-sA-ecX" id="h9d-Pf-LD7"/>
+                                    <outlet property="dataSource" destination="vzX-MZ-4p6" id="l2e-OC-poO"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="x2x-yB-riW" id="Cyj-UE-dau"/>
-                            <outlet property="delegate" destination="x2x-yB-riW" id="qnb-sl-gtd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Prayer Times" largeTitleDisplayMode="always" id="uWU-hA-X4W"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kgS-Qc-4gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Ramadhan 1439H" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZX-QK-dW6">
+                                <rect key="frame" x="0.0" y="162" width="375" height="40.5"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="33"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cf9-yN-wfO" firstAttribute="trailing" secondItem="FZX-QK-dW6" secondAttribute="trailing" id="2kb-xI-22H"/>
+                            <constraint firstItem="cf9-yN-wfO" firstAttribute="trailing" secondItem="k79-cN-RB4" secondAttribute="trailing" id="5b8-T8-dfB"/>
+                            <constraint firstItem="UHv-5b-ajd" firstAttribute="leading" secondItem="cf9-yN-wfO" secondAttribute="leading" id="DTv-w2-tEa"/>
+                            <constraint firstItem="k79-cN-RB4" firstAttribute="leading" secondItem="cf9-yN-wfO" secondAttribute="leading" id="Htb-hO-f0U"/>
+                            <constraint firstItem="UHv-5b-ajd" firstAttribute="trailing" secondItem="cf9-yN-wfO" secondAttribute="trailing" id="VIe-XC-AVn"/>
+                            <constraint firstItem="UHv-5b-ajd" firstAttribute="top" secondItem="cf9-yN-wfO" secondAttribute="top" id="b1l-hI-fCC"/>
+                            <constraint firstItem="k79-cN-RB4" firstAttribute="top" secondItem="UHv-5b-ajd" secondAttribute="bottom" id="duj-4y-AWp"/>
+                            <constraint firstItem="FZX-QK-dW6" firstAttribute="leading" secondItem="cf9-yN-wfO" secondAttribute="leading" id="fOb-J7-mNl"/>
+                            <constraint firstItem="FZX-QK-dW6" firstAttribute="top" secondItem="cf9-yN-wfO" secondAttribute="top" constant="98" id="fjf-dc-ZrQ"/>
+                            <constraint firstItem="cf9-yN-wfO" firstAttribute="bottom" secondItem="k79-cN-RB4" secondAttribute="bottom" id="mMu-0U-IZb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cf9-yN-wfO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Prayer Times" id="OxS-ms-2sb"/>
+                    <connections>
+                        <outlet property="tableView" destination="k79-cN-RB4" id="U8A-Ea-c2n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8B-Zy-DYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-316" y="89.505247376311857"/>
+            <point key="canvasLocation" x="1629.5999999999999" y="89.505247376311857"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="nYN-Jk-7dI">
+        <scene sceneID="pKR-CH-WV4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WQz-KV-vlW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fkM-fj-VOr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z47-Vy-nat">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cWX-vM-Z6O">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="x2x-yB-riW" kind="relationship" relationship="rootViewController" id="gwL-ie-5TW"/>
+                        <segue destination="vzX-MZ-4p6" kind="relationship" relationship="rootViewController" id="LSg-Cc-kJk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2fj-lL-P5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVy-C3-1B2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1089" y="90"/>
+            <point key="canvasLocation" x="846" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="masjid" width="600" height="400"/>
+    </resources>
 </document>

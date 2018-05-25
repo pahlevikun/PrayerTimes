@@ -9,15 +9,8 @@
 import Foundation
 
 class Time{
-    var fajr:String?
-    var sunrise:String?
-    var dhuhr:String?
-    var asr:String?
-    var sunset:String?
-    var maghrib:String?
-    var isha:String?
-    var imsak:String?
-    var midnight:String?
+    var name:String?
+    var time:String?
     var gregorian:String?
     var hijri:String?
     var timeStamp:String?
@@ -26,16 +19,9 @@ class Time{
     var timeZone:String?
     var method:String?
     
-    init?(fajr:String, sunrise:String, dhuhr:String, asr:String, sunset:String, maghrib:String, isha:String, imsak:String, midnight:String, gregorian:String, hijri:String, timeStamp:String, latitude:Double, longitude:Double, timeZone:String, method:String){
-        self.fajr = fajr
-        self.sunrise = sunrise
-        self.dhuhr = dhuhr
-        self.asr = asr
-        self.sunset = sunset
-        self.maghrib = maghrib
-        self.isha = isha
-        self.imsak = imsak
-        self.midnight = midnight
+    init?(name:String, time:String, gregorian:String, hijri:String, timeStamp:String, latitude:Double, longitude:Double, timeZone:String, method:String){
+        self.name = name
+        self.time = time
         self.gregorian = gregorian
         self.hijri = hijri
         self.timeStamp = timeStamp

@@ -14,7 +14,6 @@
 		D8B8977120B44C4C003CEBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B8977020B44C4C003CEBBD /* Assets.xcassets */; };
 		D8B8977420B44C4C003CEBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B8977220B44C4C003CEBBD /* LaunchScreen.storyboard */; };
 		D8B8977F20B44C4C003CEBBD /* PrayerTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8977E20B44C4C003CEBBD /* PrayerTimesTests.swift */; };
-		D8B8978A20B44DE2003CEBBD /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8978920B44DE2003CEBBD /* MainTableViewController.swift */; };
 		D8B8978C20B44E34003CEBBD /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8978B20B44E34003CEBBD /* MainTableViewCell.swift */; };
 		D8B897A520B45233003CEBBD /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8979720B45232003CEBBD /* Time.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		D8B8977A20B44C4C003CEBBD /* PrayerTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B8977E20B44C4C003CEBBD /* PrayerTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesTests.swift; sourceTree = "<group>"; };
 		D8B8978020B44C4C003CEBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8B8978920B44DE2003CEBBD /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		D8B8978B20B44E34003CEBBD /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		D8B8979720B45232003CEBBD /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +90,6 @@
 				D8B8977020B44C4C003CEBBD /* Assets.xcassets */,
 				D8B8977220B44C4C003CEBBD /* LaunchScreen.storyboard */,
 				D8B8977520B44C4C003CEBBD /* Info.plist */,
-				D8B8978920B44DE2003CEBBD /* MainTableViewController.swift */,
 				D8B8978B20B44E34003CEBBD /* MainTableViewCell.swift */,
 				D80DE6BC20B5D342004BB050 /* APIConfig.swift */,
 			);
@@ -212,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B8976C20B44C4C003CEBBD /* ViewController.swift in Sources */,
-				D8B8978A20B44DE2003CEBBD /* MainTableViewController.swift in Sources */,
 				D80DE6BD20B5D342004BB050 /* APIConfig.swift in Sources */,
 				D8B8978C20B44E34003CEBBD /* MainTableViewCell.swift in Sources */,
 				D8B897A520B45233003CEBBD /* Time.swift in Sources */,
