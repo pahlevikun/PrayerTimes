@@ -15,8 +15,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var times = [Time]()
     var locManager = CLLocationManager()
     
+    var fajr:String?
+    var imsak:String?
+    var sunrise:String?
+    var dhuhr:String?
+    var asr:String?
+    var sunset:String?
+    var maghrib:String?
+    var isha:String?
+    var midnight:String?
+    var name:String?
+    var gregorian:String?
+    var hijri:String? = ""
+    var timeStamp:String?
+    var latitude:Double?
+    var longitude:Double?
+    var timeZone:String?
+    var method = "Majlis Ugama Islam Singapura, Singapore"
+    
     // MARK : Property
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +48,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         locManager.startMonitoringSignificantLocationChanges()
         
         // Load data
-        loadSample()
         getJsonFromUrl()
     }
 
@@ -55,38 +73,47 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: Private method
-    private func loadSample() {
-        guard let time1 = Time(name:"Imsak", time:"04:30 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
+    
+    func addIntoArray(){
+        guard let time1 = Time(name:"Imsak", time:self.imsak!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
             fatalError("Unable to instantiate time1")
         }
-        guard let time2 = Time(name:"Fajr", time:"04:40 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time2")
-        }
-        guard let time3 = Time(name:"Sunrise", time:"05:50 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time3")
-        }
-        guard let time4 = Time(name:"Duhr", time:"11:50 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time4")
-        }
-        guard let time5 = Time(name:"Asr", time:"15:10 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time5")
-        }
-        guard let time6 = Time(name:"Sunset", time:"17:44 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time6")
-        }
-        guard let time7 = Time(name:"Maghrib", time:"17:44 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time7")
-        }
-        guard let time8 = Time(name:"Isha", time:"18:58 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time8")
-        }
-        guard let time9 = Time(name:"Midnight", time:"23:50 (WIB)", gregorian: "22-05-2018", hijri: "06-10-1439", timeStamp: "123456789", latitude: 12.1, longitude: 12.0, timeZone: "GMT+7", method: "2") else {
-            fatalError("Unable to instantiate time8")
+        
+        guard let time2 = Time(name:"Fajr", time:self.fajr!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
         }
         
-        times += [time1,time2,time3,time4,time5,time6,time7,time8,time9]
+        guard let time3 = Time(name:"Sunrise", time:self.sunrise!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
+        }
+        
+        guard let time4 = Time(name:"Dhuhr", time:self.dhuhr!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
+        }
+        
+        guard let time5 = Time(name:"Asr", time:self.asr!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
+        }
+        
+        guard let time6 = Time(name:"Sunset", time:self.sunset!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
+        }
+        
+        guard let time7 = Time(name:"Maghrib", time:self.maghrib!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
+        }
+        
+        guard let time8 = Time(name:"Fajr", time:self.isha!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
+        }
+        
+        guard let time9 = Time(name:"Midnight", time:self.midnight!, gregorian: self.gregorian!, hijri: self.hijri!, timeStamp: "", latitude: self.latitude!, longitude: self.longitude!, timeZone: self.timeZone!, method: self.method) else {
+            fatalError("Unable to instantiate time1")
+        }
+        
+        self.times += [time1,time2,time3,time4,time5,time6,time7,time8,time9]
     }
-    
+
     //this function is fetching the json from URL
     func getJsonFromUrl(){
         // ProgressLoading
@@ -105,6 +132,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard let longitude = locManager.location?.coordinate.longitude else {
             fatalError("unable to get longitude")
         }
+        
+        self.latitude = latitude
+        self.longitude = longitude
         
         // Getting date from calendar
         let date = Date()
@@ -129,13 +159,51 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                 print("Doing request...")
-                //printing the json in console
-                print(jsonObj!.value(forKey: "data")!)
+                
+                if let dataArray = jsonObj!.value(forKey: "data") as? NSArray {
+                    
+                    var index = 0
+                    for data in dataArray{
+                        
+                        if let dataDict = data as? NSDictionary{
+                            if let timingsObj = dataDict.value(forKey: "timings") as? NSDictionary {
+                                self.fajr = timingsObj.value(forKey: "Fajr") as? String
+                                self.imsak = timingsObj.value(forKey: "Imsak") as? String
+                                self.sunrise = timingsObj.value(forKey: "Sunrise") as? String
+                                self.dhuhr = timingsObj.value(forKey: "Dhuhr") as? String
+                                self.asr = timingsObj.value(forKey: "Asr") as? String
+                                self.sunset = timingsObj.value(forKey: "Sunset") as? String
+                                self.maghrib = timingsObj.value(forKey: "Maghrib") as? String
+                                self.isha = timingsObj.value(forKey: "Isha") as? String
+                                self.midnight = timingsObj.value(forKey: "Midnight") as? String
+                                
+                            }
+                            if let dateObj = dataDict.value(forKey: "date") as? NSObject {
+                                if let gregorianObj = dateObj.value(forKey: "gregorian") as? NSObject {
+                                    self.gregorian = gregorianObj.value(forKey: "date") as? String
+                                }
+                                if let hijriObj = dateObj.value(forKey: "hijri") as? NSObject {
+                                    self.hijri = hijriObj.value(forKey: "date") as? String
+                                }
+                            }
+                            if let metaObj = dataDict.value(forKey: "meta") as? NSObject {
+                                self.timeZone = metaObj.value(forKey: "timezone") as? String
+                                
+                            }
+                            if index == (currentDate-1) {
+                                self.addIntoArray()
+                            }
+                            index = index + 1
+                        }
+                    }
+                }
                 
                 OperationQueue.main.addOperation({
                     //calling another function after fetching the json
                     //it will show the names to label
                     print("Request done...")
+                    self.dateLabel.text = self.hijri
+                    self.tableView.reloadData()
                     indicator.stopAnimating()
                 })
             }
